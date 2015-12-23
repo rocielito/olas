@@ -9,15 +9,21 @@
   <title>Olas</title>
   <link rel="shortcut icon" href="">
 
-  <!--    Bootstrap-->
+  <!-- jquery-->
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <!-- Bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
+  <!-- leaflet-->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
-  <!--    Estilo propio-->
+  <!-- Estilo propio-->
   <link rel="stylesheet" href="estilo/estilo.css">
 
-  <!--    Scripts-->
+  <!-- Scripts-->
   <script src="javascript/script.js"></script>
 
   <!--[if IE]>
@@ -55,7 +61,7 @@
         <h3 class="panel-title">mapa</h3>
       </div>
       <div class="panel-body">
-        aquí situamos el mapa
+        <div id="map"></div>
       </div>
     </div>
   </div>
@@ -66,7 +72,7 @@
       </div>
       <div class="panel-body">
         <!--        enlace a tweets sobre bastiagueiro-->
-        <a class="twitter-timeline" href="https://twitter.com/search?q=bastiagueiro" data-widget-id="679637803865665536">Tweets sobre bastiagueiro</a>
+        <a class="twitter-timeline" href="https://twitter.com/hashtag/bastiagueiro" data-widget-id="679637803865665536">Tweets sobre #bastiagueiro</a>
         <script>
           ! function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0],
@@ -79,7 +85,23 @@
             }
           }(document, "script", "twitter-wjs");
         </script>
+
         <!--        enlace a tweets sobre bastiagueiro-->
+        <!--        enlace a tweets sobre orzan-->
+        <a class="twitter-timeline" href="https://twitter.com/hashtag/orzan" data-widget-id="679642834971013122">Tweets sobre #orzan</a>
+        <script>
+          ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+              p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = p + "://platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, "script", "twitter-wjs");
+        </script>
+        <!--        enlace a tweets sobre orzan-->
       </div>
     </div>
   </div>
