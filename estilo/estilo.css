@@ -18,11 +18,21 @@ body {
 .panel,
 .panel-default {
   width: 100%;
+  margin: 0px;
   border-radius: 0px;
+}
+
+.panel-body {
+  padding: 0px;
 }
 
 .col-xs-12,
 .col-md-8,
 .col-md-4 {
   padding: 0px;
+}
+
+.navbar-fixed-bottom {
+  min-height: 20px;
+  font-size: 12px;
 }
