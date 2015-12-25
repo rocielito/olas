@@ -12,7 +12,17 @@ $(function () {
       $(this).closest('.panel').find('.panel-body').show();
       $(this).find('.glyphicon').removeClass('glyphicon-plus').addClass('glyphicon-minus');
     }
+    // Conmutador para que no se muestren los 2 paneles a la vez
+    var panel = $(this).closest('.panel').attr('id');
+    if (panel == 'mapa' && (($('#mapa').find('.glyphicon').attr('class') == 'glyphicon glyphicon-minus' && $('#info').find('.glyphicon').attr('class') == 'glyphicon glyphicon-minus') || ($('#mapa').find('.glyphicon').attr('class') == 'glyphicon glyphicon-plus' && $('#info').find('.glyphicon').attr('class') == 'glyphicon glyphicon-plus'))) {
+      $('#info').find('.ocultar').click();
+    } else if (panel == 'info' && (($('#mapa').find('.glyphicon').attr('class') == 'glyphicon glyphicon-minus' && $('#info').find('.glyphicon').attr('class') == 'glyphicon glyphicon-minus') || ($('#mapa').find('.glyphicon').attr('class') == 'glyphicon glyphicon-plus' && $('#info').find('.glyphicon').attr('class') == 'glyphicon glyphicon-plus'))) {
+      $('#mapa').find('.ocultar').click();
+    }
   });
+
+  // Ocultamos el panel de información nada más cargar la página
+  $('#info').find('.ocultar').click();
 
   //Manejadores de twitter
   ! function (d, s, id) {
@@ -29,6 +39,11 @@ $(function () {
   this.cargarInfo = function (hashtag, id) {
     $('#info').find('.panel-body').html('<a class="twitter-timeline" href="https://twitter.com/hashtag/' + hashtag + '" data-widget-id="' + id + '"></a>');
     twttr.widgets.load();
+    // Ocultamos el mapa
     $('#mapa').find('.ocultar').click();
+    // Mostramos la información en caso de que el panel esté oculto
+    if ($('#info').find('.glyphicon').attr('class') == 'glyphicon glyphicon-plus') {
+      $('#info').find('.ocultar').click();
+    }
   };
 });
