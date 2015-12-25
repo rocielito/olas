@@ -27,7 +27,7 @@ $(function () {
   }(document, "script", "twitter-wjs");
 
   this.cargarInfo = function (hashtag, id) {
-    $('#info').find('.panel-body').html('<a class="twitter-timeline" href="https://twitter.com/hashtag/' + hashtag + '" data-widget-id="' + id + '"></a>Obteniendo información de Twitter...');
+    $('#info').find('.panel-body').html('<a class="twitter-timeline" href="https://twitter.com/hashtag/' + hashtag + '" data-widget-id="' + id + '"></a>');
     twttr.widgets.load();
     $('#mapa').find('.ocultar').click();
   };
