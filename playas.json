@@ -3,7 +3,7 @@
     {
       "nombre": "Bastiagueiro",
       "coordenadas": [43.341022, -8.362772],
-      "region": "",
+      "region": "Pontevedra",
       "hashtag": "olasbastiagueiro",
       "id": "679637803865665536",
       "windguru": "http://www.windguru.cz/es/index.php?sc=56085&sty=m_spot",
@@ -12,7 +12,7 @@
     {
       "nombre": "Orzán",
       "coordenadas": [43.372561, -8.403939],
-      "region": "",
+      "region": "A Coruña",
       "hashtag": "olasorzan",
       "id": "679642834971013122",
       "windguru": "http://www.windguru.cz/es/index.php?sc=109934&sty=m_spot",
@@ -21,7 +21,7 @@
     {
       "nombre": "Barrañán",
       "coordenadas": [43.311551, -8.551836],
-      "region": "",
+      "region": "Pontevedra",
       "hashtag": "olasbarrañan",
       "id": "680473725230301184",
       "windguru": "http://www.windguru.cz/es/index.php?sc=135673&sty=m_spot",
